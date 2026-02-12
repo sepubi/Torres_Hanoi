@@ -18,6 +18,6 @@ namespace Torres_de_Hanoi
             public override string ToString()
             {
             return Valor.ToString();
-            }vfgerg
+            }
         }
     }
