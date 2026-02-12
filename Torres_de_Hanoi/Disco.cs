@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Torres_de_Hanoi
 {
-    class Disco
-    {
-        /*TODO: 
-        Decidir tipo de Valor
-        public int Valor { get; set; }
-        public String Valor { get; set; }
-        */
+        class Disco
+        {
+            public int Valor { get; set; } // Tamaño del disco
 
+            public Disco(int valor)
+            {
+                Valor = valor;
+            }
+
+            public override string ToString()
+            {
+            return Valor.ToString();
+            }vfgerg
+        }
     }
-}
