@@ -1,0 +1,7 @@
+C:\Users\jcata\Desktop\Practicas_algoritmica\Torres_Hanoi\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe.config
+C:\Users\jcata\Desktop\Practicas_algoritmica\Torres_Hanoi\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe
+C:\Users\jcata\Desktop\Practicas_algoritmica\Torres_Hanoi\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.pdb
+C:\Users\jcata\Desktop\Practicas_algoritmica\Torres_Hanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.AssemblyReference.cache
+C:\Users\jcata\Desktop\Practicas_algoritmica\Torres_Hanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.CoreCompileInputs.cache
+C:\Users\jcata\Desktop\Practicas_algoritmica\Torres_Hanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.exe
+C:\Users\jcata\Desktop\Practicas_algoritmica\Torres_Hanoi\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.pdb

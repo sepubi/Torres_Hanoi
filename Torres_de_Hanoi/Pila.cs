@@ -1,20 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System;
-using System.Collections.Generic;
 
 namespace Torres_de_Hanoi
 {
     class Pila
     {
-        public int Size { get { return Elementos.Count; } } // Cantidad de discos
-        public Disco Top { get { return Elementos.Count > 0 ? Elementos[Elementos.Count - 1] : null; } } // Disco superior
-        public List<Disco> Elementos { get; set; } // Conjunto de discos
-        public string Nombre { get; set; } // Nombre de la pila
+        public string Nombre { get; private set; }
+
+        private List<Disco> Elementos;
+
+        public int Size
+        {
+            get { return Elementos.Count; }
+        }
+
+        public Disco Top
+        {
+            get
+            {
+                if (isEmpty())
+                    return null;
+
+                return Elementos[Elementos.Count - 1];
+            }
+        }
 
         public Pila(string nombre)
         {
@@ -24,7 +33,10 @@ namespace Torres_de_Hanoi
 
         public void push(Disco d)
         {
-            if (Top == null || Top.Valor > d.Valor)
+            if (d == null)
+                throw new ArgumentNullException("No se puede insertar un disco nulo.");
+
+            if (isEmpty() || Top.Valor > d.Valor)
             {
                 Elementos.Add(d);
             }
@@ -36,7 +48,9 @@ namespace Torres_de_Hanoi
 
         public Disco pop()
         {
-            if (Elementos.Count == 0) return null;
+            if (isEmpty())
+                throw new InvalidOperationException("No se puede extraer de una pila vacía.");
+
             Disco d = Top;
             Elementos.RemoveAt(Elementos.Count - 1);
             return d;
@@ -50,8 +64,16 @@ namespace Torres_de_Hanoi
         public void Mostrar()
         {
             Console.Write($"{Nombre}: ");
+
+            if (isEmpty())
+            {
+                Console.WriteLine("(vacía)");
+                return;
+            }
+
             foreach (var disco in Elementos)
-                Console.Write(disco.Valor + " ");
+                Console.Write(disco + " ");
+
             Console.WriteLine();
         }
     }

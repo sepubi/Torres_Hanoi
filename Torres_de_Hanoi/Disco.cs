@@ -1,23 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Torres_de_Hanoi
 {
-        class Disco
+    class Disco
+    {
+        // Tamaño del disco
+        public int Valor { get; private set; }
+
+        public Disco(int valor)
         {
-            public int Valor { get; set; } // Tamaño del disco
+            if (valor <= 0)
+                throw new ArgumentException("El valor del disco debe ser mayor que 0.");
 
-            public Disco(int valor)
-            {
-                Valor = valor;
-            }
+            Valor = valor;
+        }
 
-            public override string ToString()
-            {
+        public override string ToString()
+        {
             return Valor.ToString();
-            }
         }
     }
+}
